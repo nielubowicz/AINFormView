@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "AINFormView.h"
 
 @interface AINFormViewTests : XCTestCase
 
@@ -26,9 +27,10 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testFormViewCreation
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    AINFormView *formView = [[AINFormView alloc] init];
+    XCTAssertNotNil(formView, @"FormView object should not be nil");
+    
 }
-
 @end

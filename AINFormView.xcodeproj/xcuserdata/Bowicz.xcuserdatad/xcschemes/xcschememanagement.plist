@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>AINFormViewUnitTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -18,6 +23,16 @@
 			<true/>
 		</dict>
 		<key>8E06609A1A733EEF0099B3AB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8E990D071A89C01C00CBE876</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8E990D1D1A89C01C00CBE876</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "AINFormView.h"
+#import "AINFormViewCell.h"
 
 @interface ViewController ()
 
@@ -18,6 +20,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    AINFormView *formView = [[AINFormView alloc] initWithFrame:self.view.bounds];    
+    [self.view addSubview:formView];
 }
 
 - (void)didReceiveMemoryWarning
