@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1BB75BC1F6D64C119FD919E8 /* libPods-AINFormView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E5194615F414EC18BA05F6A /* libPods-AINFormView.a */; };
 		8E06607B1A733EEF0099B3AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E06607A1A733EEF0099B3AB /* Foundation.framework */; };
 		8E06607D1A733EEF0099B3AB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E06607C1A733EEF0099B3AB /* CoreGraphics.framework */; };
 		8E06607F1A733EEF0099B3AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E06607E1A733EEF0099B3AB /* UIKit.framework */; };
@@ -24,6 +23,10 @@
 		8E0660A71A733EEF0099B3AB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8E0660A51A733EEF0099B3AB /* InfoPlist.strings */; };
 		8E0660A91A733EEF0099B3AB /* AINFormViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0660A81A733EEF0099B3AB /* AINFormViewTests.m */; };
 		8E0660B41A733FB30099B3AB /* AINFormView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E0660B31A733FB30099B3AB /* AINFormView.m */; };
+		8E5E8AAE1ADE240800714288 /* AINFormValidationDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5E8AAD1ADE240800714288 /* AINFormValidationDisplay.m */; };
+		8E5E8AB11ADE24F500714288 /* AINFormValidationOutline.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5E8AB01ADE24F500714288 /* AINFormValidationOutline.m */; };
+		8E5E8AB41ADE25E000714288 /* AINFormValidationStyleFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5E8AB31ADE25E000714288 /* AINFormValidationStyleFactory.m */; };
+		8E5E8AB71ADE2AAB00714288 /* AINFormValidationAccessoryIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5E8AB61ADE2AAB00714288 /* AINFormValidationAccessoryIcon.m */; };
 		8E990D091A89C01C00CBE876 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E06607A1A733EEF0099B3AB /* Foundation.framework */; };
 		8E990D0A1A89C01C00CBE876 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E06607C1A733EEF0099B3AB /* CoreGraphics.framework */; };
 		8E990D0B1A89C01C00CBE876 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E06607E1A733EEF0099B3AB /* UIKit.framework */; };
@@ -47,7 +50,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5E5194615F414EC18BA05F6A /* libPods-AINFormView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AINFormView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E0660771A733EEF0099B3AB /* AINFormView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AINFormView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E06607A1A733EEF0099B3AB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8E06607C1A733EEF0099B3AB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -70,6 +72,14 @@
 		8E0660A81A733EEF0099B3AB /* AINFormViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AINFormViewTests.m; sourceTree = "<group>"; };
 		8E0660B21A733FB30099B3AB /* AINFormView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AINFormView.h; sourceTree = "<group>"; };
 		8E0660B31A733FB30099B3AB /* AINFormView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AINFormView.m; sourceTree = "<group>"; };
+		8E5E8AAC1ADE216200714288 /* AINFormValidationDisplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AINFormValidationDisplay.h; sourceTree = "<group>"; };
+		8E5E8AAD1ADE240800714288 /* AINFormValidationDisplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AINFormValidationDisplay.m; sourceTree = "<group>"; };
+		8E5E8AAF1ADE24F500714288 /* AINFormValidationOutline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AINFormValidationOutline.h; sourceTree = "<group>"; };
+		8E5E8AB01ADE24F500714288 /* AINFormValidationOutline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AINFormValidationOutline.m; sourceTree = "<group>"; };
+		8E5E8AB21ADE25E000714288 /* AINFormValidationStyleFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AINFormValidationStyleFactory.h; sourceTree = "<group>"; };
+		8E5E8AB31ADE25E000714288 /* AINFormValidationStyleFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AINFormValidationStyleFactory.m; sourceTree = "<group>"; };
+		8E5E8AB51ADE2AAB00714288 /* AINFormValidationAccessoryIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AINFormValidationAccessoryIcon.h; sourceTree = "<group>"; };
+		8E5E8AB61ADE2AAB00714288 /* AINFormValidationAccessoryIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AINFormValidationAccessoryIcon.m; sourceTree = "<group>"; };
 		8E990D081A89C01C00CBE876 /* AINFormViewUnitTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AINFormViewUnitTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E990D0E1A89C01C00CBE876 /* AINFormViewUnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AINFormViewUnitTests-Info.plist"; sourceTree = "<group>"; };
 		8E990D101A89C01C00CBE876 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -80,7 +90,6 @@
 		8E990D181A89C01C00CBE876 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8ED4E5811A734A1600DFB83D /* AINFormViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AINFormViewCell.h; sourceTree = "<group>"; };
 		8ED4E5821A734A1600DFB83D /* AINFormViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AINFormViewCell.m; sourceTree = "<group>"; };
-		ED89DD488CBA4C6F90B0B4D2 /* Pods-AINFormView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AINFormView.xcconfig"; path = "Pods/Pods-AINFormView.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +100,6 @@
 				8E06607D1A733EEF0099B3AB /* CoreGraphics.framework in Frameworks */,
 				8E06607F1A733EEF0099B3AB /* UIKit.framework in Frameworks */,
 				8E06607B1A733EEF0099B3AB /* Foundation.framework in Frameworks */,
-				1BB75BC1F6D64C119FD919E8 /* libPods-AINFormView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,7 +134,6 @@
 				8E990D0C1A89C01C00CBE876 /* AINFormViewUnitTests */,
 				8E0660791A733EEF0099B3AB /* Frameworks */,
 				8E0660781A733EEF0099B3AB /* Products */,
-				ED89DD488CBA4C6F90B0B4D2 /* Pods-AINFormView.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,7 +154,6 @@
 				8E06607C1A733EEF0099B3AB /* CoreGraphics.framework */,
 				8E06607E1A733EEF0099B3AB /* UIKit.framework */,
 				8E06609C1A733EEF0099B3AB /* XCTest.framework */,
-				5E5194615F414EC18BA05F6A /* libPods-AINFormView.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -155,18 +161,19 @@
 		8E0660801A733EEF0099B3AB /* AINFormView */ = {
 			isa = PBXGroup;
 			children = (
-				8E0660891A733EEF0099B3AB /* AppDelegate.h */,
-				8E06608A1A733EEF0099B3AB /* AppDelegate.m */,
-				8E06608C1A733EEF0099B3AB /* Main_iPhone.storyboard */,
-				8E06608F1A733EEF0099B3AB /* Main_iPad.storyboard */,
-				8E0660921A733EEF0099B3AB /* ViewController.h */,
-				8E0660931A733EEF0099B3AB /* ViewController.m */,
-				8E0660951A733EEF0099B3AB /* Images.xcassets */,
-				8E0660811A733EEF0099B3AB /* Supporting Files */,
+				8E5E8AAB1ADE212500714288 /* AINFormViewCell Decorators */,
 				8E0660B21A733FB30099B3AB /* AINFormView.h */,
 				8E0660B31A733FB30099B3AB /* AINFormView.m */,
 				8ED4E5811A734A1600DFB83D /* AINFormViewCell.h */,
 				8ED4E5821A734A1600DFB83D /* AINFormViewCell.m */,
+				8E06608C1A733EEF0099B3AB /* Main_iPhone.storyboard */,
+				8E06608F1A733EEF0099B3AB /* Main_iPad.storyboard */,
+				8E0660891A733EEF0099B3AB /* AppDelegate.h */,
+				8E06608A1A733EEF0099B3AB /* AppDelegate.m */,
+				8E0660921A733EEF0099B3AB /* ViewController.h */,
+				8E0660931A733EEF0099B3AB /* ViewController.m */,
+				8E0660951A733EEF0099B3AB /* Images.xcassets */,
+				8E0660811A733EEF0099B3AB /* Supporting Files */,
 			);
 			path = AINFormView;
 			sourceTree = "<group>";
@@ -200,6 +207,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8E5E8AAB1ADE212500714288 /* AINFormViewCell Decorators */ = {
+			isa = PBXGroup;
+			children = (
+				8E5E8AAC1ADE216200714288 /* AINFormValidationDisplay.h */,
+				8E5E8AAD1ADE240800714288 /* AINFormValidationDisplay.m */,
+				8E5E8AAF1ADE24F500714288 /* AINFormValidationOutline.h */,
+				8E5E8AB01ADE24F500714288 /* AINFormValidationOutline.m */,
+				8E5E8AB51ADE2AAB00714288 /* AINFormValidationAccessoryIcon.h */,
+				8E5E8AB61ADE2AAB00714288 /* AINFormValidationAccessoryIcon.m */,
+				8E5E8AB21ADE25E000714288 /* AINFormValidationStyleFactory.h */,
+				8E5E8AB31ADE25E000714288 /* AINFormValidationStyleFactory.m */,
+			);
+			name = "AINFormViewCell Decorators";
+			sourceTree = "<group>";
+		};
 		8E990D0C1A89C01C00CBE876 /* AINFormViewUnitTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,11 +251,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E0660AC1A733EEF0099B3AB /* Build configuration list for PBXNativeTarget "AINFormView" */;
 			buildPhases = (
-				71148B8CC6C8473E87DB70F2 /* Check Pods Manifest.lock */,
 				8E0660731A733EEF0099B3AB /* Sources */,
 				8E0660741A733EEF0099B3AB /* Frameworks */,
 				8E0660751A733EEF0099B3AB /* Resources */,
-				8971D18248094209809439A5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -285,6 +305,7 @@
 		8E06606F1A733EEF0099B3AB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = AIN;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Assorted Intelligence";
 				TargetAttributes = {
@@ -344,39 +365,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		71148B8CC6C8473E87DB70F2 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		8971D18248094209809439A5 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-AINFormView-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		8E0660731A733EEF0099B3AB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -384,9 +372,13 @@
 			files = (
 				8E0660941A733EEF0099B3AB /* ViewController.m in Sources */,
 				8E06608B1A733EEF0099B3AB /* AppDelegate.m in Sources */,
+				8E5E8AB41ADE25E000714288 /* AINFormValidationStyleFactory.m in Sources */,
 				8E0660871A733EEF0099B3AB /* main.m in Sources */,
 				8E0660B41A733FB30099B3AB /* AINFormView.m in Sources */,
+				8E5E8AAE1ADE240800714288 /* AINFormValidationDisplay.m in Sources */,
+				8E5E8AB71ADE2AAB00714288 /* AINFormValidationAccessoryIcon.m in Sources */,
 				8ED4E5831A734A1600DFB83D /* AINFormViewCell.m in Sources */,
+				8E5E8AB11ADE24F500714288 /* AINFormValidationOutline.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,7 +529,6 @@
 		};
 		8E0660AD1A733EEF0099B3AB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED89DD488CBA4C6F90B0B4D2 /* Pods-AINFormView.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -551,7 +542,6 @@
 		};
 		8E0660AE1A733EEF0099B3AB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED89DD488CBA4C6F90B0B4D2 /* Pods-AINFormView.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -670,6 +660,7 @@
 				8E990D2D1A89C01C00CBE876 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

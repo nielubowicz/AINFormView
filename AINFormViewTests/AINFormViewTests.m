@@ -9,7 +9,7 @@
 #import <XCTest/XCTest.h>
 #import "AINFormView.h"
 
-@interface AINFormViewTests : XCTestCase
+@interface AINFormViewTests : XCTestCase <AINFormViewDataSouce,AINFormViewDelegate>
 
 @end
 
@@ -31,6 +31,9 @@
 {
     AINFormView *formView = [[AINFormView alloc] init];
     XCTAssertNotNil(formView, @"FormView object should not be nil");
+ 
     
 }
+
+
 @end

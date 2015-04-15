@@ -7,10 +7,12 @@
 //
 
 #import "AINFormViewCell.h"
+#import "AINFormValidationDisplay.h"
+#import "AINFormValidationStyleFactory.h"
 
 @interface AINFormViewCell () <UITextFieldDelegate>
 
-@property (nonatomic, strong) ValidationBlock validationBlock;
+@property (assign,nonatomic) AINFormValidationState isValid;
 
 @end
 
@@ -29,16 +31,23 @@
         [self.contentView addSubview:_formInput];
         
         self.selectionStyle = UITableViewCellSelectionStyleNone;
+        self.validationStyle = AINFormValidationStyleOutlined;
     }
+    
     return self;
 }
 
 - (void)layoutSubviews
 {
     self.formInput.frame = self.contentView.bounds;
+    if (self.formInput.text.length > 0) {
+        [self validateInput];
+    }
+}
 
-    // redraw validation icon given the result of the validation block
-    [self validateInput];
+- (void)prepareForReuse
+{
+    self.isValid = AINFormValidationNotValidated;
 }
 
 -(BOOL)validateInput;
@@ -46,8 +55,35 @@
     BOOL inputIsValid = YES;
     if (self.validationBlock != nil) {
         inputIsValid = self.validationBlock(self.formInput.text);
+        if (inputIsValid) {
+            self.isValid = AINFormValidationIsValid;
+        } else {
+            self.isValid = AINFormValidationIsInvalid;
+        }
     }
     return inputIsValid;
+}
+
+- (void)setValidationStyle:(AINFormValidationStyle)validationStyle
+{
+    _validationStyle = validationStyle;
+    self.validationDisplay = [AINFormValidationStyleFactory validationDisplayForValidationStyle:self.validationStyle withTextField:self.formInput];
+}
+
+-(void)setIsValid:(AINFormValidationState)isValid
+{
+    _isValid = isValid;
+    [self.validationDisplay configureForValidationState:self.isValid];
+}
+
+-(void)setEditing:(BOOL)editing
+{
+    if (editing) {
+        [self.formInput becomeFirstResponder];
+    }
+    else {
+        [self.formInput resignFirstResponder];
+    }
 }
 
 @end
