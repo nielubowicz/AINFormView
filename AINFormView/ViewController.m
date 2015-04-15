@@ -28,7 +28,9 @@
     formView.formDelegate = self;
     [self.view addSubview:formView];
     
-    self.placeholderArray = @[@"Name", @"Email Address", @"Astrological Sign", @"Worst Fear", @"Zipcode"];
+    self.placeholderArray = @[ @[@"Name", @"Email Address", @"Astrological Sign", @"Worst Fear", @"Zipcode"],
+                               @[@"Favorite Food", @"Favorite Drink", @"Favorite Mush"],
+                               @[@"Stones or Beatles?", @"Whiskey or Bourbon?", @"Salt 'n' Pepa?"] ];
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,15 +44,31 @@
 
 - (NSString *)formView:(AINFormView *)formView placeholderLabelTextForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return self.placeholderArray[indexPath.row];
+    return self.placeholderArray[indexPath.section][indexPath.row];
 }
 
 - (NSInteger)formView:(AINFormView *)formView numberOfRowsInSection:(NSInteger)section
 {
+    return [self.placeholderArray[section] count];
+}
+
+- (NSInteger)numberOfSectionsInFormView:(AINFormView *)formView
+{
     return self.placeholderArray.count;
 }
 
-
+- (NSString *)formView:(AINFormView *)formView sectionTitleForSection:(NSInteger)formSection
+{
+    NSString *title = nil;
+    if (formSection == 0) {
+        title = @"Details";
+    } else if (formSection == 1) {
+        title = @"Favorites";
+    } else {
+        title = @"Answer me these questions three";
+    }
+    return title;
+}
 #pragma mark - AINFormViewDelegate
 
 -(void)formView:(AINFormView *)formView didFinishWithFormInfo:(NSDictionary *)formInfo forSection:(NSInteger)formSection;
