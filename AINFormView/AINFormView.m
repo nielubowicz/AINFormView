@@ -11,7 +11,6 @@
 
 @interface AINFormView () <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 
-@property (nonatomic,assign) BOOL isScrolling;
 @property (nonatomic,strong) NSIndexPath *editingIndexPath;
 @property (nonatomic,strong) NSIndexPath *desiredEditingIndexPath;
 
@@ -101,6 +100,9 @@ static NSString *const AINFormCellReuseIdentifier = @"AINFormCell";
         cell.validationBlock = NULL;
     }
     
+    if (self.formDelegate && [self.formDelegate respondsToSelector:@selector(formView:willDisplayCell:forRowAtIndexPath:)]) {
+        [self.formDelegate formView:self willDisplayCell:cell forRowAtIndexPath:indexPath];
+    }
     return cell;
 }
 

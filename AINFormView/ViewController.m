@@ -12,6 +12,8 @@
 
 @interface ViewController () <AINFormViewDataSouce, AINFormViewDelegate>
 
+@property (nonatomic, strong) NSArray *placeholderArray;
+
 @end
 
 @implementation ViewController
@@ -25,6 +27,8 @@
     formView.formDataSource = self;
     formView.formDelegate = self;
     [self.view addSubview:formView];
+    
+    self.placeholderArray = @[@"Name", @"Email Address", @"Astrological Sign", @"Worst Fear", @"Zipcode"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,12 +42,12 @@
 
 - (NSString *)formView:(AINFormView *)formView placeholderLabelTextForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [NSString stringWithFormat:@"Placeholder #%@", @(indexPath.row + 1)];
+    return self.placeholderArray[indexPath.row];
 }
 
 - (NSInteger)formView:(AINFormView *)formView numberOfRowsInSection:(NSInteger)section
 {
-    return 8;
+    return self.placeholderArray.count;
 }
 
 
@@ -54,4 +58,8 @@
     NSLog(@"%s:%d %@", __PRETTY_FUNCTION__, formSection, formInfo);
 }
 
+- (void)formView:(AINFormView *)formView willDisplayCell:(AINFormViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+}
 @end

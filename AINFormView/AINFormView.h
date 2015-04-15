@@ -11,6 +11,8 @@
 @protocol AINFormViewDataSouce;
 @protocol AINFormViewDelegate;
 
+@class AINFormViewCell;
+
 @interface AINFormView : UITableView
 
 @property (nonatomic, weak) id<AINFormViewDataSouce>formDataSource;
@@ -40,5 +42,10 @@
 @required
 
 -(void)formView:(AINFormView *)formView didFinishWithFormInfo:(NSDictionary *)formInfo forSection:(NSInteger)formSection;
+
+@optional
+
+-(void)formView:(AINFormView *)formView willDisplayCell:(AINFormViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath;
+-(void)formView:(AINFormView *)formView didEndDisplayingCell:(AINFormViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
